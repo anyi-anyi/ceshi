@@ -10,7 +10,7 @@ import unittest
 
 # 封装requests库的get和post请求方法为一个自定义类
 class Connection:
-    def __init__(self, host, port=80):
+    def __init__(self, host, port=8080):
         self.base_url = 'http://%s:%d' % (host, port)
         self.session = requests.session()
 
@@ -41,7 +41,7 @@ class Agileone(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        cls.con = Connection('10.180.1.47')
+        cls.con = Connection('192.168.186.128')
 
     @classmethod
     def tearDownClass(cls):
